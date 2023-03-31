@@ -8,11 +8,13 @@ public class Slizarin extends Hogwards
     private int nahodch;
     private int vlast;
 
-    public Slizarin(int powerKoldov, int powTransgress) {
+    public Slizarin(int powerKoldov, int powTransgress)
+    {
         super(powerKoldov, powTransgress);
     }
 
-    public Slizarin(int powerKoldov, int powTransgress, int hitrost, int reshit, int ambic, int nahodch, int vlast) {
+    public Slizarin(int powerKoldov, int powTransgress, int hitrost, int reshit, int ambic, int nahodch, int vlast)
+    {
         super(powerKoldov, powTransgress);
         this.hitrost = hitrost;
         this.reshit = reshit;
@@ -70,5 +72,20 @@ public class Slizarin extends Hogwards
     public void setVlast(int vlast)
     {
         this.vlast = vlast;
+    }
+
+    public int countChois(int powerKoldov, int powTransgress, int hitrost, int reshit, int ambic, int nahodch, int vlast)
+    {
+        int count = 0;
+        count = powerKoldov + powTransgress + hitrost + reshit + ambic + nahodch + vlast;
+        return count;
+    }
+
+    public boolean compCount(int countChois1, int countChois2)
+    {
+        boolean comp = false;
+        if (countChois1 == countChois2)
+            comp = true;
+        return comp;
     }
 }

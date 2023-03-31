@@ -12,7 +12,8 @@ public class Kogtevran extends Hogwards
         super(powerKoldov, powTransgress);
     }
 
-    public Kogtevran(int powerKoldov, int powTransgress, int um, int mudrost, int ostroum, int tverdost) {
+    public Kogtevran(int powerKoldov, int powTransgress, int um, int mudrost, int ostroum, int tverdost)
+    {
         super(powerKoldov, powTransgress);
         this.um = um;
         this.mudrost = mudrost;
@@ -60,4 +61,20 @@ public class Kogtevran extends Hogwards
     {
         this.tverdost = tverdost;
     }
+
+    public int countChois(int powerKoldov, int powTransgress, int um, int mudrost, int ostroum, int tverdost)
+    {
+        int count = 0;
+        count = powerKoldov + powTransgress + um + mudrost + ostroum + tverdost;
+        return count;
+    }
+
+    public boolean compCount(int countChois1, int countChois2)
+    {
+        boolean comp = false;
+        if (countChois1 == countChois2)
+            comp = true;
+        return comp;
+    }
+
 }

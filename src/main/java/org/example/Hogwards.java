@@ -30,4 +30,10 @@ public class Hogwards
             {
                 this.powTransgress = powTransgress;
             }
+
+            @Override
+            public String toString()
+            {
+                return "Hogwards{" + "powerKoldov=" + powerKoldov + ", powTransgress=" + powTransgress + '}';
+            }
         }
