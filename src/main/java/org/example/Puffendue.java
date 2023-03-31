@@ -11,7 +11,8 @@ public class Puffendue extends Hogwards
         super(powerKoldov, powTransgress);
     }
 
-    public Puffendue(int powerKoldov, int powTransgress, int trud, int vera, int chestnost) {
+    public Puffendue(int powerKoldov, int powTransgress, int trud, int vera, int chestnost)
+    {
         super(powerKoldov, powTransgress);
         this.trud = trud;
         this.vera = vera;
@@ -47,5 +48,20 @@ public class Puffendue extends Hogwards
     public void setChestnost(int chestnost)
     {
         this.chestnost = chestnost;
+    }
+
+    public int countChois(int powerKoldov, int powTransgress, int trud, int vera, int chestnost)
+    {
+        int count = 0;
+        count = powerKoldov + powTransgress + trud + vera + chestnost;
+        return count;
+    }
+
+    public boolean compCount(int countChois1, int countChois2)
+    {
+        boolean comp = false;
+        if (countChois1 == countChois2)
+            comp = true;
+        return comp;
     }
 }
